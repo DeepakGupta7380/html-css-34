@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Quicksand", sans-serif;
+        }
+        #screenCnt{
+            /* display:flex;
+            flex-direction: column; */
+            height: 100vh;
+            width: 100vw;
+            /* border: 2px solid red; */
+        }
+        #topNavbarCnt{
+            height: 40px;
+            width: 100%;
+            /* border: 4px solid greenyellow; */
+            background-color: #8109AD;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #topNavbarCnt p{
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+        #bodyCnt{
+            width: 84%;
+            margin: auto;
+            /* border: 4px solid yellow; */
+            height: calc(100vh - 40px);
+        }
+        #navbarCnt{
+            height: 70px;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: space-around;
+        }
+        #logoCnt{
+            width: 10%;
+            /* border: 2px solid pink; */
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #logoCnt p {
+            font-size: 23px;
+            font-weight: bold;
+        }
+        #navCnt{
+            width: 60%;
+            /* border: 2px solid red; */
+             height: 100%;
+             /* display: flex; */
+        }
+        #navCnt div{
+            /* border: 2px solid orange; */
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 60%;
+            justify-content: space-between;
+            /* justify-content: center; */
+            
+        }
+        #navCnt div P{
+            font-weight: bold;
+            color: #526173;
+        }
+        #proCnt{
+            width: 12%;
+            /* border: 2px solid blue; */
+             height: 100%;
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+        }
+        #proCnt div:nth-child(1) p{
+            color: gray;
+        }
+        #proCnt div:nth-child(2) p{
+            background-color: #008197;
+            padding: 8px 6px;
+            border-radius: 5px;
+        }
+        #proCnt div:nth-child(2) p{
+            font-size: 15px;
+            color: white;
+        }
+        #contentCnt{
+            /* border: 2px solid red; */
+            border-radius: 20px;
+            height: calc(100vh - 300px);
+         
+            background: linear-gradient(to bottom,
+                rgba(129, 9, 173, 0.8),
+                rgba(0, 117, 137, 0.8)
+                
+            );
+                
+            width: 100%;
+        }
+        #proCnt div:last-child{
+            display: none;
+
+        }
+        #contentimgCnt{
+            /* border: 2px solid white; */
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+             /* border-radius: 10px; */
+             padding: 0px;
+             margin: 20px;
+        }
+        #contentimgCnt img{
+            height: 40px;
+            width: 250px;
+           
+            margin: 0px 30px;
+            border-radius: 10px;
+            /* border: 2px solid green; */
+            /* padding-top: 10px; */
+        }
+        #body{
+            /* border: 2px solid red; */
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        /* #hero-content{
+            max-width: 700px;
+            
+
+        } */
+        #hero-content h1{
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        #hero-content p{
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        #hero-content small{
+            display: block;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        #form{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        #form input{
+            height: 45px;
+            padding: 0 15px;
+            line-height: 45px;
+            border: none;
+            border-radius: 4px;
+            margin: 40px;
+            font-size: 16px;
+        }
+        #form button{
+            height: 45px;
+            padding: 0 20px;
+            border: none;
+            border-radius: 4px;
+            background: #00bcd4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 40px;
+            font-weight: bold;
+        }
+        #form button:hover{
+            background: #0097a7;
+        }
+        #companyCnt{
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            /* display: flex; */
+        }
+        #companyCnt p{
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #777;
+            margin-bottom: 20px;
+            /* display: flex; */
+
+        }
+        #companies{
+            display: flex;
+        }
+        #companies span img{
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            gap: 20px;
+            /* font-weight: bold; */
+            color: #555;
+            width: 200px;
+            height: 100px;
+            /* align-items: center; */
+            /* justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly; */
+           
+        }
+        
+        @media (max-width: 1000px){
+            #navbarCnt{
+                /* border: 2px solid red; */
+            }
+            #logoCnt{
+                width: 40%;
+                /* border: 2px solid pink; */
+                justify-content: flex-start;
+            }
+            #navCnt{
+                display: none;
+            }
+            #navbarCnt{
+                justify-content: space-between;
+            }
+            #proCnt div:nth-child(1){
+                display: none;
+            }
+            #proCnt div:last-child{
+            display: block;
+
+        }
+            #proCnt div:nth-child(3){
+                padding: 10px;
+            }
+            
+            #proCnt{
+                width: 40%;
+                justify-content: flex-end;
+                /* border: 2px solid blue; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="screenCnt">
+        <div id="topNavbarCnt">
+            <p>
+💥 2026 New Year's Sale 💥 Take 50% off your first 6 months! (new subscribers only, renews at regular price).
+</p>
+        </div>
+        <div id="bodyCnt">
+            <div id="navbarCnt">
+                <div id="logoCnt">
+                    <p>treehouse</p>
+                </div>
+                <div id="navCnt">
+                    <div>
+                    <p>Plans</p>
+                    <p>Library</p>
+                    <p>Techdegree</p>
+                    <p>Community</p>
+                    <p>Resources</p>
+                    </div>
+                </div>
+                <div id="proCnt">
+                    <div>
+                        <p>Sign In</p>
+                    </div>
+                    <div>
+                        <p>Free trial</p>
+                    </div>
+                    <div>
+                        <img src="../day4/menu.svg"/>
+                    </div>
+                </div>
+            </div>
+            <div id="contentCnt">
+                <div id="contentimgCnt">
+                    <img src="../day-7b/photo.webp"/>
+                </div>
+                <div id="body">
+                    <div id="hero-content">
+                    <h1>Behind Every Smart AI User Is a <br> Smarter Human</h1>
+                    <p>Master the core languages: JavaScript, HTML, CSS, and Python</p>
+                    <small>Try it free for 7 days, then $25 a month</small>
+                    
+                    </div>
+                </div>
+                <div id="form">
+                        <input type="email" placeholder="Email"/>
+                        <button>Join treehouse</button>
+                    </div>
+            </div>
+            <div id="companyCnt">
+                <p>COMPANIES EMPLOYING TREEHOUSE STUDENTS</p>
+                <div id="companies">
+                    <span>
+                        <img src="../day-7b/nikl.png"/>
+                    </span>
+                    <span>
+                        <img src="../day-7b/Adobe.png"/>
+                    </span>
+                    <span>
+                        <img src="../day-7b/mail.png"/>
+                    </span>
+                    <span>
+                        <img src="../day-7b/vasa.png"/>
+                    </span>
+                    <span>
+                        <img src="../day-7b/hub.png"/>
+                    </span>
+                    <span>
+                        <img src="../day-7b/ver.png"/>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
